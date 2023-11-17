@@ -29,7 +29,7 @@ __metadata:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
     "@alwatr/util": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -45,7 +45,7 @@ __metadata:
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@alwatr/validator": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
   languageName: unknown
   linkType: soft
 
@@ -56,7 +56,7 @@ __metadata:
     "@alwatr/logger": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -65,7 +65,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/logger@workspace:packages/logger"
   dependencies:
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -75,7 +75,7 @@ __metadata:
   resolution: "@alwatr/math@workspace:packages/math"
   dependencies:
     "@alwatr/logger": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -88,7 +88,7 @@ __metadata:
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -97,7 +97,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/type@workspace:packages/type"
   dependencies:
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
   languageName: unknown
   linkType: soft
 
@@ -109,7 +109,7 @@ __metadata:
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     flatstr: "npm:^1.0.12"
     tslib: "npm:^2.6.2"
   languageName: unknown
@@ -122,7 +122,7 @@ __metadata:
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     tslib: "npm:^2.6.2"
   languageName: unknown
   linkType: soft
@@ -1178,12 +1178,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.9.0":
-  version: 20.9.0
-  resolution: "@types/node@npm:20.9.0"
+"@types/node@npm:^20.9.1":
+  version: 20.9.1
+  resolution: "@types/node@npm:20.9.1"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 755d07de735eafda4e20af75ad9d03bdbfddef327d790e9a896142eac7493db5d8501591376e1c8227aa12eeb88e522bc727c6024504842ed40e539e8a466db9
+  checksum: 0cb52c0840fe9a2e8f988564da6823bb3141e34fef8cb7264762c851c0dac5d9ef4859db422dfa41cd1a864ad126a9bd3b588d0285bc9af6de814de3280da9b3
   languageName: node
   linkType: hard
 
@@ -1602,7 +1602,7 @@ __metadata:
     "@lerna-lite/publish": "npm:^2.6.0"
     "@lerna-lite/run": "npm:^2.6.0"
     "@lerna-lite/version": "npm:^2.6.0"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^20.9.1"
     "@typescript-eslint/eslint-plugin": "npm:^6.11.0"
     "@typescript-eslint/parser": "npm:^6.11.0"
     "@web/dev-server": "npm:^0.4.0"
