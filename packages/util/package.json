@@ -37,7 +37,10 @@
     "url": "https://github.com/Alwatr/alwatr-es-sdk/issues"
   },
   "nano-build": {
-    "entryPoints": ["src/main.ts", "src/node/main.ts"]
+    "entryPoints": [
+      "src/main.ts",
+      "src/node/main.ts"
+    ]
   },
   "scripts": {
     "b": "yarn run build",
