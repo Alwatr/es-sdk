@@ -22,7 +22,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/crypto@workspace:^, @alwatr/crypto@workspace:packages/crypto":
+"@alwatr/crypto@workspace:packages/crypto":
   version: 0.0.0-use.local
   resolution: "@alwatr/crypto@workspace:packages/crypto"
   dependencies:
@@ -34,21 +34,6 @@ __metadata:
     "@types/node": "npm:^20.10.5"
     npm-run-all: "npm:^4.1.5"
     typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
-"@alwatr/demo@workspace:demo":
-  version: 0.0.0-use.local
-  resolution: "@alwatr/demo@workspace:demo"
-  dependencies:
-    "@alwatr/crypto": "workspace:^"
-    "@alwatr/fetch": "workspace:^"
-    "@alwatr/logger": "workspace:^"
-    "@alwatr/math": "workspace:^"
-    "@alwatr/type": "workspace:^"
-    "@alwatr/util": "workspace:^"
-    "@alwatr/validator": "workspace:^"
-    "@types/node": "npm:^20.10.5"
   languageName: unknown
   linkType: soft
 
@@ -67,7 +52,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/fetch@workspace:^, @alwatr/fetch@workspace:packages/fetch":
+"@alwatr/fetch@workspace:packages/fetch":
   version: 0.0.0-use.local
   resolution: "@alwatr/fetch@workspace:packages/fetch"
   dependencies:
@@ -194,7 +179,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@alwatr/validator@workspace:^, @alwatr/validator@workspace:packages/validator":
+"@alwatr/validator@workspace:packages/validator":
   version: 0.0.0-use.local
   resolution: "@alwatr/validator@workspace:packages/validator"
   dependencies:
@@ -1924,14 +1909,12 @@ __metadata:
     "@lerna-lite/publish": "npm:^3.1.0"
     "@lerna-lite/run": "npm:^3.1.0"
     "@lerna-lite/version": "npm:^3.1.0"
-    "@types/node": "npm:^20.10.5"
     "@typescript-eslint/eslint-plugin": "npm:^6.15.0"
     "@typescript-eslint/parser": "npm:^6.15.0"
     "@web/dev-server": "npm:^0.4.1"
     eslint: "npm:^8.56.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
     eslint-plugin-import: "npm:^2.29.1"
-    npm-run-all: "npm:^4.1.5"
     prettier: "npm:^3.1.1"
     typescript: "npm:^5.3.3"
   languageName: unknown
