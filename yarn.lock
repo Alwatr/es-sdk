@@ -71,7 +71,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/logger@workspace:packages/logger"
   dependencies:
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@types/node": "npm:^20.10.5"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -80,7 +84,11 @@ __metadata:
   resolution: "@alwatr/math@workspace:packages/math"
   dependencies:
     "@alwatr/logger": "workspace:^"
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@types/node": "npm:^20.10.5"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -95,15 +103,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/nano-build@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@alwatr/nano-build@npm:1.0.1"
+  dependencies:
+    esbuild: "npm:^0.19.10"
+  bin:
+    nano-build: nano-build.cjs
+  checksum: d84d2e5995e1bec4ebf1e6e3b89e15531f408be5f056929151063c7b2359773b88a08fd2be73d327490b195d5be092332dbef3d28fef776ce70f5f88248c2718
+  languageName: node
+  linkType: hard
+
 "@alwatr/nano-server@workspace:packages/nano-server":
   version: 0.0.0-use.local
   resolution: "@alwatr/nano-server@workspace:packages/nano-server"
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -114,11 +137,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/tsconfig-base@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@alwatr/tsconfig-base@npm:1.0.1"
+  checksum: ce4fff648a9ac2e92b68cb98164e4e7c73380f342b1c5dc42acb07fe30121619da47bfab443b07e84a36ee346b98017db460311884404305b7239883f4710394
+  languageName: node
+  linkType: hard
+
 "@alwatr/type@workspace:^, @alwatr/type@workspace:packages/type":
   version: 0.0.0-use.local
   resolution: "@alwatr/type@workspace:packages/type"
   dependencies:
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@types/node": "npm:^20.10.5"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -128,9 +162,13 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@alwatr/type": "workspace:^"
     "@types/node": "npm:^20.10.5"
     flatstr: "npm:^1.0.12"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -139,9 +177,13 @@ __metadata:
   resolution: "@alwatr/validator@workspace:packages/validator"
   dependencies:
     "@alwatr/math": "workspace:^"
+    "@alwatr/nano-build": "npm:^1.0.1"
+    "@alwatr/tsconfig-base": "npm:^1.0.1"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
+    npm-run-all: "npm:^4.1.5"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
