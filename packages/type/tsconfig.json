@@ -1,13 +1,12 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "rootDir": "src",
-    "outDir": "."
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "composite": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
-  // files, include and exclude from the inheriting config are always overwritten.
   "include": ["src/**/*.ts"],
-  "exclude": [],
   "references": []
 }
