@@ -52,6 +52,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@alwatr/eslint-config@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@alwatr/eslint-config@npm:1.0.1"
+  dependencies:
+    esbuild: "npm:^0.19.10"
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ">6.0.0"
+    "@typescript-eslint/parser": ">6.0.0"
+    eslint: ">8.0.0"
+    eslint-import-resolver-typescript: ">3.0.0"
+    eslint-plugin-import: ">2.0.0"
+  checksum: 8e8be335a13ffbf5ffb6535ee1649e424f5b4412434f2a880dda018a8f50bfc4121f7f169944bf8d8b76bb22c2c056ee29a5fb942d2b3ba7b63595060860f7bf
+  languageName: node
+  linkType: hard
+
 "@alwatr/fetch@workspace:^, @alwatr/fetch@workspace:packages/fetch":
   version: 0.0.0-use.local
   resolution: "@alwatr/fetch@workspace:packages/fetch"
@@ -129,6 +144,13 @@ __metadata:
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
+
+"@alwatr/prettier-config@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@alwatr/prettier-config@npm:1.0.1"
+  checksum: 6c0953470862aab28c8438d4cf7aa6831cf470125e91f1aa20401082f839342395de0558a08c8c6fe33dfa09b94ae4720d76f7690b46dda4cbd621118f00b0cc
+  languageName: node
+  linkType: hard
 
 "@alwatr/tsconfig-base@npm:^1.0.0":
   version: 1.0.0
@@ -1893,6 +1915,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "alwatr-es-sdk@workspace:."
   dependencies:
+    "@alwatr/eslint-config": "npm:^1.0.1"
+    "@alwatr/prettier-config": "npm:^1.0.1"
     "@lerna-lite/changed": "npm:^3.1.0"
     "@lerna-lite/cli": "npm:^3.1.0"
     "@lerna-lite/diff": "npm:^3.1.0"

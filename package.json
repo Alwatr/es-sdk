@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "private": true,
+  "prettier": "@alwatr/prettier-config",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
@@ -45,6 +46,8 @@
     "publish": "lerna publish from-package"
   },
   "devDependencies": {
+    "@alwatr/eslint-config": "^1.0.1",
+    "@alwatr/prettier-config": "^1.0.1",
     "@lerna-lite/changed": "^3.1.0",
     "@lerna-lite/cli": "^3.1.0",
     "@lerna-lite/diff": "^3.1.0",
