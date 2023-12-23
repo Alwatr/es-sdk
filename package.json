@@ -6,7 +6,6 @@
   "license": "MIT",
   "type": "module",
   "private": true,
-  "prettier": "@alwatr/prettier-config",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
@@ -15,6 +14,7 @@
     "packages/*",
     "demo"
   ],
+  "prettier": "@alwatr/prettier-config",
   "scripts": {
     "b": "yarn run build",
     "c": "yarn run clean",
@@ -22,7 +22,7 @@
     "l": "yarn run lint",
     "f": "yarn run format",
     "rl": "yarn run pull && yarn run clean && yarn run build && yarn run release",
-    "upd": "yarn set version latest; yarn up '*' -i; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode; yarn dedupe",
+    "upd": "yarn set version latest; yarn up '*'; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode; yarn dedupe",
     "lint": "eslint . --config .eslintrc.json --ext .ts",
     "build": "lerna run build",
     "format": "yarn run format:prettier && yarn run format:eslint",
@@ -34,8 +34,8 @@
     "publish": "lerna publish from-package"
   },
   "devDependencies": {
-    "@alwatr/eslint-config": "^1.0.1",
-    "@alwatr/prettier-config": "^1.0.1",
+    "@alwatr/eslint-config": "^1.0.4",
+    "@alwatr/prettier-config": "^1.0.4",
     "@lerna-lite/changed": "^3.1.0",
     "@lerna-lite/cli": "^3.1.0",
     "@lerna-lite/diff": "^3.1.0",

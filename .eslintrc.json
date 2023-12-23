@@ -1,4 +1,4 @@
 {
-  "extends": "@alwatr/eslint-config",
-  "rules": {}
+  "root": true,
+  "extends": "@alwatr/eslint-config"
 }
