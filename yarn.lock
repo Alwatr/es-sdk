@@ -28,7 +28,7 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/util": "workspace:^"
@@ -73,7 +73,7 @@ __metadata:
   resolution: "@alwatr/fetch@workspace:packages/fetch"
   dependencies:
     "@alwatr/logger": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
@@ -88,7 +88,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/logger@workspace:packages/logger"
   dependencies:
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
@@ -102,7 +102,7 @@ __metadata:
   resolution: "@alwatr/math@workspace:packages/math"
   dependencies:
     "@alwatr/logger": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
@@ -111,14 +111,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@alwatr/nano-build@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@alwatr/nano-build@npm:1.0.4"
+"@alwatr/nano-build@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@alwatr/nano-build@npm:1.1.1"
   dependencies:
     esbuild: "npm:^0.19.10"
   bin:
     nano-build: nano-build.cjs
-  checksum: 880945aaa77ec6f6f1af91ab620af65ce0c162f3a5a6692022ddd50bd28608bf7dbb9c2e32410a46a05b312dab4e2bf409fd8036629f648a49468f56577e7ee9
+  checksum: 96a59e01d0bf337c261297770ab1c8b0b37c6ef3b32c44dd6133936d23561887c5380c35d9a59d4b8d0110d2d26b948d72c424742cc46c823c9ad92fce3e4056
   languageName: node
   linkType: hard
 
@@ -128,7 +128,7 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
@@ -157,7 +157,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/type@workspace:packages/type"
   dependencies:
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
@@ -172,7 +172,7 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
@@ -188,7 +188,7 @@ __metadata:
   resolution: "@alwatr/validator@workspace:packages/validator"
   dependencies:
     "@alwatr/math": "workspace:^"
-    "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/nano-build": "npm:^1.1.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"

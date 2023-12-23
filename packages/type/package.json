@@ -44,7 +44,7 @@
     "cb": "yarn run clean && yarn run build",
     "d": "yarn run build:es && ALWATR_DEBUG=1 yarn node",
     "build": "yarn run build:ts & yarn run build:es",
-    "build:es": "nano-build",
+    "build:es": "nano-build --preset=module",
     "build:ts": "tsc --build",
     "watch": "yarn run watch:ts & yarn run watch:es",
     "watch:es": "yarn run build:es --watch",
@@ -52,7 +52,7 @@
     "clean": "rm -rfv dist .tsbuildinfo"
   },
   "devDependencies": {
-    "@alwatr/nano-build": "^1.0.4",
+    "@alwatr/nano-build": "^1.1.1",
     "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/tsconfig-base": "^1.0.4",
     "@types/node": "^20.10.5",
