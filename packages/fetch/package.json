@@ -26,7 +26,8 @@
   },
   "license": "MIT",
   "files": [
-    "**/*.{d.ts.map,d.ts,js.map,js,html,md,cjs,mjs,cjs.map,mjs.map}"
+    "**/*.{js,mjs,cjs,map,d.ts,html,md}",
+    "!demo/**/*"
   ],
   "publishConfig": {
     "access": "public"
@@ -40,6 +41,7 @@
   "bugs": {
     "url": "https://github.com/Alwatr/alwatr-es-sdk/issues"
   },
+  "prettier": "@alwatr/prettier-config",
   "scripts": {
     "b": "yarn run build",
     "w": "yarn run watch",
@@ -60,6 +62,7 @@
   },
   "devDependencies": {
     "@alwatr/nano-build": "^1.0.4",
+    "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/tsconfig-base": "^1.0.4",
     "@alwatr/type": "workspace:^",
     "@types/node": "^20.10.5",

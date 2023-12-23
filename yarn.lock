@@ -29,6 +29,7 @@ __metadata:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
@@ -73,6 +74,7 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
@@ -87,6 +89,7 @@ __metadata:
   resolution: "@alwatr/logger@workspace:packages/logger"
   dependencies:
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
     npm-run-all: "npm:^4.1.5"
@@ -100,6 +103,7 @@ __metadata:
   dependencies:
     "@alwatr/logger": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
     npm-run-all: "npm:^4.1.5"
@@ -125,6 +129,7 @@ __metadata:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
@@ -153,6 +158,7 @@ __metadata:
   resolution: "@alwatr/type@workspace:packages/type"
   dependencies:
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@types/node": "npm:^20.10.5"
     npm-run-all: "npm:^4.1.5"
@@ -167,6 +173,7 @@ __metadata:
     "@alwatr/logger": "workspace:^"
     "@alwatr/math": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
     "@types/node": "npm:^20.10.5"
@@ -182,6 +189,7 @@ __metadata:
   dependencies:
     "@alwatr/math": "workspace:^"
     "@alwatr/nano-build": "npm:^1.0.4"
+    "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
