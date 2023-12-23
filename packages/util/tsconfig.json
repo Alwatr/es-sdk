@@ -1,14 +1,13 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "rootDir": "src",
-    "outDir": "."
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "composite": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
-
   "include": ["src/**/*.ts"],
-  "exclude": [],
   "references": [
     {"path": "../type"},
     {"path": "../math"},
