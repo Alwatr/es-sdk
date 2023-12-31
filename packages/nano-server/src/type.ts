@@ -1,9 +1,20 @@
 declare module 'http' {
   interface IncomingHttpHeaders {
     /**
-     * Alwatr Client UUID
+     * Alwatr Device UUID
      */
-    'client-id'?: string;
+    'device-id'?: string;
+
+    /**
+     * User id
+     */
+    'user-id'?: string;
+
+    /**
+     * User token
+     */
+    'user-token'?: string;
+
 
     'x-forwarded-for'?: string;
   }
@@ -87,3 +98,9 @@ export interface ConnectionConfig {
 
 export type ParamKeyType = 'string' | 'number' | 'boolean';
 export type ParamValueType = string | number | boolean | null;
+
+export interface UserAuth {
+  id: string;
+  token: string;
+  deviceId: string;
+}
