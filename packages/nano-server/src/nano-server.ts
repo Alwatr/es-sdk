@@ -495,14 +495,20 @@ export class AlwatrConnection {
    *
    * @param validator Optional function to validate the user authentication.
    * @returns The user authentication information.
-   * @throws {'access_denied'} If user authentication is missing or validation fails.
+   * @throws {'authorization_required'} If user authentication is missing.
+   * @throws {'access_denied'} If user authentication is invalid.
+   *
    *
    * @example
    * ```ts
-   * const userAuth = connection.requireUserAuth();
+   * function validateUserAuth(userAuth: UserAuth): boolean {
+   *  return userAuth.id === 'public_user_id' && userAuth.token === 'secret_token';
+   * }
+   *
+   * await connection.requireUserAuth(validateUserAuth);
    * ```
    */
-  requireUserAuth(validator?: (userAuth: Partial<UserAuth>) => boolean): UserAuth {
+  async requireUserAuth(validator?: (userAuth: UserAuth) => PromiseLike<boolean>): Promise<UserAuth> {
     const userAuth = this.getUserAuth();
 
     if (userAuth.id == null || userAuth.token == null || userAuth.deviceId == null) {
@@ -512,7 +518,7 @@ export class AlwatrConnection {
         errorCode: 'authorization_required',
       };
     }
-    else if (typeof validator === 'function' && validator(userAuth) !== true) {
+    else if (typeof validator === 'function' && await validator(userAuth as UserAuth) !== true) {
       throw {
         ok: false,
         statusCode: 403,
