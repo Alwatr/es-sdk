@@ -469,6 +469,28 @@ export class AlwatrConnection {
   }
 
   /**
+   * Get the token placed in the request header.
+   *
+   * Extract token from `Authorization` with `Bearer ` prefix.
+   *
+   * @returns token placed in the request header without bearer.
+   *
+   * @example
+   * ```ts
+   * const token = connection.getAuthBearer();
+   * ```
+   */
+  getAuthBearer(): string | null {
+    const auth = this.incomingMessage.headers.authorization?.split(' ');
+
+    if (auth == null || auth[0].toLowerCase() !== 'bearer') {
+      return null;
+    }
+
+    return auth[1];
+  }
+
+  /**
    * Get the user authentication information from the incoming message headers.
    *
    * @returns An object containing the user authentication information.
