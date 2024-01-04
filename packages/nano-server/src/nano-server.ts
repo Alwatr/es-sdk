@@ -3,7 +3,7 @@ import {createServer} from 'node:http';
 import {createLogger, definePackage, type AlwatrLogger} from '@alwatr/logger';
 import {isNumber} from '@alwatr/math';
 
-import type {NanoServerConfig, ConnectionConfig} from './type.js';
+import type {NanoServerConfig, ConnectionConfig, UserAuth} from './type';
 import type {
   AlwatrServiceResponse,
   AlwatrServiceResponseFailed,
@@ -16,7 +16,6 @@ import type {
   QueryParameters,
   Stringifyable,
   StringifyableRecord,
-  UserAuth,
 } from '@alwatr/type';
 import type {IncomingMessage, ServerResponse} from 'node:http';
 import type {Duplex} from 'node:stream';
@@ -33,6 +32,7 @@ export type {
   AlwatrServiceResponseFailed,
   AlwatrServiceResponseSuccess,
   AlwatrServiceResponseSuccessWithMeta,
+  UserAuth,
 };
 
 definePackage('nano-server', '1.x');
@@ -399,19 +399,6 @@ export class AlwatrConnection {
   }
 
   /**
-   * Get the token placed in the request header.
-   */
-  getAuthBearer(): string | null {
-    const auth = this.incomingMessage.headers.authorization?.split(' ');
-
-    if (auth == null || auth[0].toLowerCase() !== 'bearer') {
-      return null;
-    }
-
-    return auth[1];
-  }
-
-  /**
    * Get request body for POST, PUT and POST methods.
    *
    * Example:
@@ -482,64 +469,86 @@ export class AlwatrConnection {
   }
 
   /**
-   * Parse and validate request token.
+   * Get the token placed in the request header.
    *
-   * @returns Request token.
+   * Extract token from `Authorization` with `Bearer ` prefix.
    *
-   * Example:
+   * @returns token placed in the request header without bearer.
+   *
+   * @example
    * ```ts
-   * const token = connection.requireToken((token) => token.length > 12);
-   * if (token == null) return;
+   * const token = connection.getAuthBearer();
    * ```
    */
-  requireToken(validator?: ((token: string) => boolean) | string[] | string): string {
-    const token = this.getAuthBearer();
+  getAuthBearer(): string | null {
+    const auth = this.incomingMessage.headers.authorization?.split(' ');
 
-    if (token == null) {
+    if (auth == null || auth[0].toLowerCase() !== 'bearer') {
+      return null;
+    }
+
+    return auth[1];
+  }
+
+  /**
+   * Get the user authentication information from the incoming message headers.
+   *
+   * @returns An object containing the user authentication information.
+   *
+   * @example
+   * ```ts
+   * const userAuth = connection.getUserAuth();
+   * ```
+   */
+  getUserAuth(): Partial<UserAuth> {
+    const userId = this.incomingMessage.headers['user-id'];
+    const userToken = this.incomingMessage.headers['user-token'];
+    const deviceId = this.incomingMessage.headers['device-id'];
+
+    return {
+      id: userId,
+      token: userToken,
+      deviceId: deviceId,
+    };
+  }
+
+  /**
+   * Get and validate the user authentication.
+   *
+   * @param validator Optional function to validate the user authentication.
+   * @returns The user authentication information.
+   * @throws {'authorization_required'} If user authentication is missing.
+   * @throws {'access_denied'} If user authentication is invalid.
+   *
+   *
+   * @example
+   * ```ts
+   * function validateUserAuth(userAuth: UserAuth): boolean {
+   *  return userAuth.id === 'public_user_id' && userAuth.token === 'secret_token';
+   * }
+   *
+   * await connection.requireUserAuth(validateUserAuth);
+   * ```
+   */
+  async requireUserAuth(validator?: (userAuth: UserAuth) => PromiseLike<boolean>): Promise<UserAuth> {
+    const userAuth = this.getUserAuth();
+
+    if (userAuth.id == null || userAuth.token == null || userAuth.deviceId == null) {
       throw {
         ok: false,
         statusCode: 401,
         errorCode: 'authorization_required',
       };
     }
-    else if (validator === undefined) {
-      return token;
-    }
-    else if (typeof validator === 'string') {
-      if (token === validator) return token;
-    }
-    else if (Array.isArray(validator)) {
-      if (validator.includes(token)) return token;
-    }
-    else if (typeof validator === 'function') {
-      if (validator(token) === true) return token;
-    }
-    throw {
-      ok: false,
-      statusCode: 403,
-      errorCode: 'access_denied',
-    };
-  }
-
-  /**
-   * Parse and get request user auth (include id and token).
-   *
-   * Example:
-   * ```ts
-   * const userAuth = connection.requireUserAuth();
-   * ```
-   */
-  getUserAuth(): UserAuth | null {
-    const auth = this.getAuthBearer()
-      ?.split('/')
-      .filter((item) => item.trim() !== '');
-
-    return auth == null || auth.length !== 2
-      ? null
-      : {
-        id: auth[0],
-        token: auth[1],
+    else if (typeof validator === 'function' && await validator(userAuth as UserAuth) !== true) {
+      throw {
+        ok: false,
+        statusCode: 403,
+        errorCode: 'access_denied',
       };
+    }
+
+    return userAuth as UserAuth;
   }
 
   /**
@@ -621,20 +630,5 @@ export class AlwatrConnection {
       this.incomingMessage.socket.remoteAddress ||
       'unknown'
     );
-  }
-
-  requireClientId(): string {
-    const clientId = this.incomingMessage.headers['client-id'];
-
-    if (!clientId) {
-      // eslint-disable-next-line no-throw-literal
-      throw {
-        ok: false,
-        statusCode: 401,
-        errorCode: 'client_denied',
-      };
-    }
-
-    return clientId;
   }
 }

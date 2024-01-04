@@ -25,7 +25,8 @@
   ],
   "cSpell.language": "en,fa,fa-IR",
   "cSpell.words": [
-    "Alwatr"
+    "alwatr",
+    "nanoservice"
   ],
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "git.autoStash": true,
