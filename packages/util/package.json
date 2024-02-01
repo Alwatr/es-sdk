@@ -40,7 +40,7 @@
     }
   },
   "dependencies": {
-    "@alwatr/logger": "^2.4.1",
+    "@alwatr/logger": "^3.2.5",
     "@alwatr/math": "workspace:^",
     "@alwatr/type": "workspace:^"
   },

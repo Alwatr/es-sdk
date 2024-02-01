@@ -26,12 +26,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/crypto@workspace:packages/crypto"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/math": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
   languageName: unknown
   linkType: soft
+
+"@alwatr/dedupe@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@alwatr/dedupe@npm:1.0.5"
+  checksum: f202fd343edaa2e58b92acbaead5ff72e51bb7f18b0be7f0f82c1d0afbffd138e53e35e1f9179048b540edf803a1178c57d4418c49bacc1cddc0f4f9e883f88d
+  languageName: node
+  linkType: hard
 
 "@alwatr/demo@workspace:demo":
   version: 0.0.0-use.local
@@ -39,7 +46,7 @@ __metadata:
   dependencies:
     "@alwatr/crypto": "workspace:^"
     "@alwatr/fetch": "workspace:^"
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
@@ -52,17 +59,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/fetch@workspace:packages/fetch"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
   languageName: unknown
   linkType: soft
 
-"@alwatr/logger@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "@alwatr/logger@npm:2.4.1"
-  checksum: 6fef967cab9a2e734d2c1f7bdc66fb3fd1b515830a9734ca5e035973011b7708863005b49181e5fa19313ea71bfd02974c602511eba00bd632ef6cdfcfd5460a
+"@alwatr/logger@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@alwatr/logger@npm:3.2.5"
+  dependencies:
+    "@alwatr/dedupe": "npm:^1.0.5"
+    "@alwatr/platform-info": "npm:^1.1.5"
+  checksum: a4e28d62d21b7d8ec0f1c55a40b507020edeeec1ed66f481e658767f9f13f946f18c562a2fccc50116f8685a113bfd3144c1e47b798ef415699c2ac816cfb840
   languageName: node
   linkType: hard
 
@@ -70,7 +80,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/math@workspace:packages/math"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@types/node": "npm:^20.10.5"
   languageName: unknown
   linkType: soft
@@ -79,13 +89,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/nano-server@workspace:packages/nano-server"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@alwatr/util": "workspace:^"
     "@types/node": "npm:^20.10.5"
   languageName: unknown
   linkType: soft
+
+"@alwatr/platform-info@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@alwatr/platform-info@npm:1.1.5"
+  checksum: 9da80158f7e5caaa3a57821ea09d798bde834a10b0ae75856bb30af5eb0bea9cb71249960bc3ad020f865cc1601225eeaba3a6165e705269d317893c7758835e
+  languageName: node
+  linkType: hard
 
 "@alwatr/type@workspace:^, @alwatr/type@workspace:packages/type":
   version: 0.0.0-use.local
@@ -99,7 +116,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/util@workspace:packages/util"
   dependencies:
-    "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/logger": "npm:^3.2.5"
     "@alwatr/math": "workspace:^"
     "@alwatr/type": "workspace:^"
     "@types/node": "npm:^20.10.5"
