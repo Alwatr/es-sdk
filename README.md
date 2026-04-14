@@ -1,5 +1,10 @@
 # Alwatr ES SDK
 
+> [!CAUTION]
+> **Repository Migration in Progress**
+>
+> This repository is being deprecated as part of our transition to the main [Alwatr Monorepo](https://github.com/Alwatr/alwatr). Some packages have already been moved, while others are undergoing architectural changes.
+
 ## Introduction
 
 The Alwatr ECMAScript (JavaScript/TypeScript) SDK is a collection of client-side libraries that are used by applications utilizing Alwatr services. These libraries provide functionality for various purposes, such as logging, cryptography, fetching data, mathematical operations, server implementation, utility functions, and data validation.
